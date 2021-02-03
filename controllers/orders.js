@@ -12,35 +12,35 @@ router.use(cors());
 var postgres = new Database()
 
 //GET ALL ORDERS===========================================================================================
-router.get('/allOrders', (req, res,next) => {
+router.get('/allOrder', (req, res,next) => {
    
- debugger;
-    const functionName = `fn_get_all_orders`;
-
-    return new Promise((resolve, reject) => {
-
-        postgres.functionWithResults(functionName)
-            .then((data) => {
-                debugger;
-                res.status(200).json({
-                    message: 'Here is all orders',
-                    orders: data,
-                    status: true
-                });
-                resolve(data);
-
-            })
-            .catch((error => {
-                debugger;
-                res.status(500).json({
-                    message: 'bad Request',
-                    error: error,
-                    status: false
-                });
-                reject(error);
-            }))
-
-    })
-});
-
+    debugger;
+       const functionName = `fn_get_all_orders`;
+   
+       return new Promise((resolve, reject) => {
+   
+           postgres.functionWithResults(functionName)
+               .then((data) => {
+                   debugger;
+                   res.status(200).json({
+                       message: 'Here is all orders',
+                       orders: data,
+                       status: true
+                   });
+                   resolve(data);
+   
+               })
+               .catch((error => {
+                   debugger;
+                   res.status(500).json({
+                       message: 'bad Request',
+                       error: error,
+                       status: false
+                   });
+                   reject(error);
+               }))
+   
+       })
+   });
+   
 module.exports = router;
