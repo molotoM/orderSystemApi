@@ -12,7 +12,7 @@ router.use(cors());
 var postgres = new Database()
 
 //GET ALL ORDERS===========================================================================================
-router.get('/allcustomers', (req, res,next) => {
+router.get('/allOrders', (req, res,next) => {
    
  debugger;
     const functionName = `fn_get_all_orders`;
@@ -23,8 +23,8 @@ router.get('/allcustomers', (req, res,next) => {
             .then((data) => {
                 debugger;
                 res.status(200).json({
-                    message: 'Here is all appointments',
-                    appointments: data,
+                    message: 'Here is all orders',
+                    orders: data,
                     status: true
                 });
                 resolve(data);
