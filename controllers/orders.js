@@ -15,7 +15,7 @@ var postgres = new Database()
 router.get('/allOrder', (req, res,next) => {
    
     debugger;
-       const functionName = `fn_get_all_orders`;
+       const functionName = ` fn_get_all_orders`;
    
        return new Promise((resolve, reject) => {
    

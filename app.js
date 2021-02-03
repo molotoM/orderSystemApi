@@ -14,7 +14,7 @@ router.use(cors());
 var postgres = new Database()
 //var cust = new Customer
 router.use('/customer',customer)
-router.use('/order',customer)
+router.use('/order',orders)
 
 //HELLO WORLD=================================================================================================
 router.get('/', (req, res) => res.send('Hello World!'))
