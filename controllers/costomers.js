@@ -48,7 +48,7 @@ router.get('/allcustomers', (req, res,next) => {
     })
 });
 //ADD A CUSTOMER==============================================================================================
-router.post('/addCustomer/', (req, res, next) => {
+router.post('/addCustomer/:id', (req, res, next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
 
@@ -96,7 +96,7 @@ router.post('/addCustomer/', (req, res, next) => {
     })
 });
 //UPDATE A CUSTOMER INFORMATION=================================================================================================
-router.patch('/updateAppointments/', (req, res, next) => {
+router.patch('/updateAppointments/:id', (req, res, next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
 
