@@ -13,7 +13,9 @@ var postgres = new Database()
 
 //GET ALL ORDERS===========================================================================================
 router.get('/allOrder', (req, res,next) => {
-   
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
+
     debugger;
        const functionName = ` fn_get_all_orders`;
    
