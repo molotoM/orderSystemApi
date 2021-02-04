@@ -45,6 +45,8 @@ router.get('/allOrder', (req, res,next) => {
 
   //ADD A CUSTOMER==============================================================================================
 router.post('/addOrder/', (req, res, next) => {
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
 
     debugger;
     return new Promise((resolve, reject) => {
@@ -92,6 +94,9 @@ router.post('/addOrder/', (req, res, next) => {
 
 //DELETE ORDER=================================================================================================
 router.patch('/deleteOrder/', (req, res, next) => {
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
+
     debugger;
     return new Promise((resolve, reject) => {
         let placeholder = '';
