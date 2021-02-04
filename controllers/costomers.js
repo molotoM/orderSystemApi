@@ -96,7 +96,7 @@ router.post('/addCustomer/:id', (req, res, next) => {
     })
 });
 //UPDATE A CUSTOMER INFORMATION=================================================================================================
-router.patch('/updateAppointments/:id', (req, res, next) => {
+router.put('/updateAppointments/:id', (req, res, next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
 
