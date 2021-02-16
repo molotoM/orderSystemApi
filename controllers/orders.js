@@ -143,7 +143,7 @@ router.patch('/deleteOrder/:id', (req, res, next) => {
 });
 
 //GET CUSTOMER BY EMAIL=========================================================================
-router.get('/getEmail/:eamil', (req, res, next) => {
+router.get('/getEmail/:email', (req, res, next) => {
     
 
     res.header("Access-Control-Allow-Origin","*");
