@@ -45,7 +45,7 @@ router.get('/allOrder', (req, res,next) => {
        })
    });
 
-  //ADD A CUSTOMER==============================================================================================
+  //ADD AN ORDER==============================================================================================
 router.post('/addOrder/:id', (req, res, next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
@@ -142,19 +142,19 @@ router.patch('/deleteOrder/:id', (req, res, next) => {
     })
 });
 
-//GET CUSTOMER BY EMAIL=========================================================================
+//GET ORDER BY EMAIL=========================================================================
 router.get('/getEmail/:email', (req, res, next) => {
     
 
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
 
-    const functionName = `fn_get_customer_email('${req.params.email}')`;
+    const functionName = `fn_get_order_by_email('${req.params.email}')`;
 
         postgres.callFnWithResultsById(functionName)  
             .then((data) => {
                 res.status(200).json({
-                    message: 'You discovered a costomer',
+                    message: 'You discovered orders',
                     customer: data,
                     status: true
                 });
