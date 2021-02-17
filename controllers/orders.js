@@ -155,7 +155,7 @@ router.get('/getEmail/:email', (req, res, next) => {
             .then((data) => {
                 res.status(200).json({
                     message: 'You discovered orders',
-                    customer: data,
+                    orders: data,
                     status: true
                 });
             })
