@@ -45,8 +45,8 @@ router.get('/allOrder', (req, res,next) => {
        })
    });
 
-  //ADD AN ORDER==============================================================================================
-router.post('/addOrder/:id', (req, res, next) => {
+  //ADD A AN ORDER==============================================================================================
+router.post('/addOrder/', (req, res, next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
 
@@ -75,9 +75,8 @@ router.post('/addOrder/:id', (req, res, next) => {
         .then((data) => {
             debugger;
             res.status(201).json({
-                message: 'Successfully Added an Order',
-                addedUser: data,
-                status: true
+                message: 'Successfully Added An Order',
+                order: data
             });
             resolve(data);
 
