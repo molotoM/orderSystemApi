@@ -94,7 +94,7 @@ router.post('/addOrder/', (req, res, next) => {
 });
 
 //DELETE ORDER=================================================================================================
-router.patch('/deleteOrder/:id', (req, res, next) => {
+router.patch('/deleteOrder/', (req, res, next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control_Allow-Headers","Origin,X-Requested-With,Content-Type,Accept");
 
